@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "74cde614-361c-4a4f-8b96-6f611bc68fee",
+		"name": "Exam Preparation 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28779419"
+	},
+	"item": [
+		{
+			"name": "Support Methods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Info/Methods",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Info",
+						"Methods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI1YWNjOTg0MS00MjRhLTRhYzktYmY1Ny1jOGNlODFjNTY3MGUiLCJpYXQiOiIwOC8wNi8yMDIzIDA5OjA1OjE0IiwiVXNlcklkIjoiOTY5MzRkODYtOGNiMi00Y2NhLTVmNzUtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJHZW9yZ2kxMjNAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6Ikdlb3JnaTEyMyIsImV4cCI6MTY5MTMzNDMxNCwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.yWNXO568gkbSWj1D3PCzz0j0-ZO-gemT1EpIb4lld3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Georgi123\",\r\n    \"email\": \"Georgi123@example.com\",\r\n    \"password\": \"Georgi1234\",\r\n    \"rePassword\": \"Georgi1234\",\r\n    \"acceptedAgreement\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Create",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"User",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Authentication Get Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI1YWNjOTg0MS00MjRhLTRhYzktYmY1Ny1jOGNlODFjNTY3MGUiLCJpYXQiOiIwOC8wNi8yMDIzIDA5OjA1OjE0IiwiVXNlcklkIjoiOTY5MzRkODYtOGNiMi00Y2NhLTVmNzUtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJHZW9yZ2kxMjNAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6Ikdlb3JnaTEyMyIsImV4cCI6MTY5MTMzNDMxNCwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.yWNXO568gkbSWj1D3PCzz0j0-ZO-gemT1EpIb4lld3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Georgi123@example.com\",\r\n    \"password\": \"Georgi1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Authentication",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ideas All",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI1YWNjOTg0MS00MjRhLTRhYzktYmY1Ny1jOGNlODFjNTY3MGUiLCJpYXQiOiIwOC8wNi8yMDIzIDA5OjA1OjE0IiwiVXNlcklkIjoiOTY5MzRkODYtOGNiMi00Y2NhLTVmNzUtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJHZW9yZ2kxMjNAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6Ikdlb3JnaTEyMyIsImV4cCI6MTY5MTMzNDMxNCwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.yWNXO568gkbSWj1D3PCzz0j0-ZO-gemT1EpIb4lld3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/All",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Idea",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI1YWNjOTg0MS00MjRhLTRhYzktYmY1Ny1jOGNlODFjNTY3MGUiLCJpYXQiOiIwOC8wNi8yMDIzIDA5OjA1OjE0IiwiVXNlcklkIjoiOTY5MzRkODYtOGNiMi00Y2NhLTVmNzUtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJHZW9yZ2kxMjNAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6Ikdlb3JnaTEyMyIsImV4cCI6MTY5MTMzNDMxNCwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.yWNXO568gkbSWj1D3PCzz0j0-ZO-gemT1EpIb4lld3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New idea for the exam\",\r\n    \"description\": \"New idea discripnion from postman for the QA exam preparation 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Create",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Idea",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI1YWNjOTg0MS00MjRhLTRhYzktYmY1Ny1jOGNlODFjNTY3MGUiLCJpYXQiOiIwOC8wNi8yMDIzIDA5OjA1OjE0IiwiVXNlcklkIjoiOTY5MzRkODYtOGNiMi00Y2NhLTVmNzUtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJHZW9yZ2kxMjNAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6Ikdlb3JnaTEyMyIsImV4cCI6MTY5MTMzNDMxNCwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.yWNXO568gkbSWj1D3PCzz0j0-ZO-gemT1EpIb4lld3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New idea for the exam EDITED\",\r\n    \"url\": null,\r\n    \"description\": \"EDITED New idea discripnion from postman for the QA exam preparation 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Edit?IdeaID=21506888-8b92-4ca4-f0f8-08db92c27c0d",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "IdeaID",
+							"value": "21506888-8b92-4ca4-f0f8-08db92c27c0d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Idea",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI1YWNjOTg0MS00MjRhLTRhYzktYmY1Ny1jOGNlODFjNTY3MGUiLCJpYXQiOiIwOC8wNi8yMDIzIDA5OjA1OjE0IiwiVXNlcklkIjoiOTY5MzRkODYtOGNiMi00Y2NhLTVmNzUtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJHZW9yZ2kxMjNAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6Ikdlb3JnaTEyMyIsImV4cCI6MTY5MTMzNDMxNCwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.yWNXO568gkbSWj1D3PCzz0j0-ZO-gemT1EpIb4lld3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Delete?IdeaID=7fa88d15-343c-445d-f0f7-08db92c27c0d",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "IdeaID",
+							"value": "7fa88d15-343c-445d-f0f7-08db92c27c0d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
